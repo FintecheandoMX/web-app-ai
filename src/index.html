@@ -46,5 +46,22 @@
         <div class="right triangle"></div>
       </div>
     </mifosx-web-app>
+    <script>
+      (function (d, t) {
+        var BASE_URL = 'https://chat.flexcore.mx';
+        var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+        g.src = BASE_URL + '/packs/js/sdk.js';
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g, s);
+        g.onload = function () {
+          window.chatwootSDK.run({
+            websiteToken: 'pJx4BXGJBJNA29VmG7x9Cf2H',
+            baseUrl: BASE_URL
+          });
+        };
+      })(document, 'script');
+    </script>
   </body>
 </html>
